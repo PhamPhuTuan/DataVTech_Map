@@ -14,6 +14,11 @@
       :zoom="15"
       @click="MapClick"
     >
+      <!-- <DirectionsRenderer
+        travelMode="DRIVING"
+        :origin="startLocation"
+        :destination="endLocation"
+      /> -->
       <Marker
         v-for="(item, idx) in geojson.features"
         :key="idx"
@@ -32,18 +37,22 @@
 </template>
 
 <script>
-import { GoogleMap, Marker, InfoWindow } from "vue3-google-map";
+import { GoogleMap, Marker, InfoWindow, } from "vue3-google-map";
+// import DirectionsRenderer from "@/direc";
 export default {
   name: "App",
   components: {
     GoogleMap,
     Marker,
     InfoWindow,
+    // DirectionsRenderer
   },
   data() {
     return {
       lng: 0,
       lat: 0,
+      startLocation: { lat: -34.94536477255069, lng: 138.55101730228625 },
+      endLocation: {lat: -34.933825692138065, lng: 138.55146791340076},
       center: { lat: -34.94536477255069, lng: 138.55101730228625 },
       geojson: {
         type: "FeatureCollection",
