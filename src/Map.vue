@@ -28,6 +28,18 @@
         new Marker({color: "#FF0000"})
           .setLngLat([144.964635,-37.816938])
           .addTo(map.value);
+        new Marker({color: "#FF0000"})
+          .setLngLat([145.013687,-37.810907])
+          .addTo(map.value);
+        new Marker({color: "#FF0000"})
+          .setLngLat([144.934861,-37.812113])
+          .addTo(map.value);
+        new Marker({color: "#FF0000"})
+          .setLngLat([144.959482,-37.849047])
+          .addTo(map.value);
+        new Marker({color: "#FF0000"})
+          .setLngLat([144.992883,-37.847992])
+          .addTo(map.value);
       }),
       onUnmounted(() => {
         map.value?.remove();
